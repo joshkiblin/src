@@ -1,8 +1,7 @@
 def spaceship_distance(lightminutes):
 	total_distance = 0
-
-	for day in range(1, 29):
+	for week in range(1, 53):
 		total_distance = total_distance + lightminutes
-		print('You have traveled %s lightminutes in %s days' %(lightminutes, day))
+		print('Week %s = %s lightminutes' % (week, total_distance))
 
-spaceship_distance(0.5)
+spaceship_distance(2)

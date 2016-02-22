@@ -31,3 +31,23 @@ print ("please enter the combined mpg for %s" % (A))
 tempMPGA = sys.stdin.readline()
 mpgA = float(tempMPGA)
 
+# Get combined mpg for car B and store as a variable
+print ("please enter the combined mpg for %s" % (B))
+tempMPGB = sys.stdin.readline()
+mpgB = float(tempMPGB)
+
+# Calculate average cost/mile for car A and store as variable ACM
+ACM = gas_price / mpgA
+
+# Calculate average cost/mile for car B and store as variable BCM
+BCM = gas_price / mpgB
+
+# Calculate cost/mile difference BCM minus ACM and store as variable CMD
+CMD = BCM - ACM
+
+# Calculate miles to break even point through retail cost difference/CMD and store as BEPM
+BEPM = RCD / CMD
+BEPMi = int(BEPM)
+
+# Return results to user with nice message containing BEPM on the screen
+print("In order to get your money back driving a %s you have to drive %s miles" % (A, BEPMi))

@@ -12,20 +12,22 @@ class Sidewalks(Inanimate):
 
 class Animals(Animate):
 	def breathe(self):
-		pass
+		print('breathing')
 	def move(self):
-		pass
+		print('moving')
 	def eat_food(self):
-		pass
+		print('eating food')
 
 class Mammals(Animals):
 	def feed_young_with_milk(self):
-		pass
+		print ('feeding young')
 
 class Giraffes(Mammals):
 	def eat_leaves(self):
-		pass
+		print('eating leaves')
 
 reginald = Giraffes()
 
 reginald.move()
+reginald.eat_leaves()
+reginald.breathe()

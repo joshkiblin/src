@@ -9,5 +9,7 @@ candy = 'I like candy!'
 # help(candy.partition)
 print(candy.partition('ike'))
 
-user_calc = input('Enter a calculation: ')
-eval(user_calc)
+count = list(range(0, 365, 7))
+print(count)
+print(sum(count))
+

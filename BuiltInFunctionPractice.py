@@ -8,3 +8,6 @@ candy = 'I like candy!'
 # print(dir('candy'))
 # help(candy.partition)
 print(candy.partition('ike'))
+
+user_calc = input('Enter a calculation: ')
+eval(user_calc)

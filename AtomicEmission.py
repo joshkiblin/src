@@ -36,6 +36,7 @@ wavelength = C / v
 visLimit = 7 * 10**(-7)
 uvLimit = 38 * 10**(-8)
 
+# Formats the frequency and wavelength to use when printing out the results to the user
 vstring = ('%.2E' % (v))
 lstring = ('%.2E' % (wavelength))
 
@@ -57,6 +58,6 @@ print('')
 print('The length of each wave was %s meters' % (lstring))
 print('')
 print('So based on the information above, it is determined')
-print('that the energy emitted was %s level in the %s range of the specturm' % (type, range))
+print('that the energy emitted was %s level in the %s range of the spectrum' % (type, range))
 print('')
 print('Thanks for using the Amazing Atomic Emission application!')

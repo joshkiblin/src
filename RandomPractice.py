@@ -15,3 +15,8 @@ while True:
 		print('Too high')
 	elif i < num:
 		print('Too low')
+
+names = ['Billy', 'Smith', 'Fred']
+print(random.choice(names))
+random.shuffle(names)
+print(names)

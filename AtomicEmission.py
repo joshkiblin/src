@@ -1,5 +1,3 @@
-import math
-
 # Welcomes the user
 print('')
 print('Welcome to the Amazing Atomic Emission application!')
@@ -17,7 +15,7 @@ significand = input('Please input the significand value (the number at the begin
 # Stores the value as a variable named exponent
 exponent = input('Please input the exponential power of your E value (the number 10 is raised to) and press return: ')
 
-# Uses the significand and exponent inputted by the useSr to assemble a value for E.
+# Uses the significand and exponent inputted by the user to assemble a value for E.
 E = significand * (10**exponent)
 
 # Declares Plank's Constant as h

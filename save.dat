@@ -1,0 +1,24 @@
+(dp0
+S'backpack'
+p1
+(lp2
+S'sleeping bag'
+p3
+aS'clothes'
+p4
+aS'food'
+p5
+asS'player_position'
+p6
+S'N23 E45'
+p7
+sS'pockets'
+p8
+(lp9
+S'keys'
+p10
+aS'knife'
+p11
+aS'apple'
+p12
+as.

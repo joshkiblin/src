@@ -36,6 +36,9 @@ wavelength = C / v
 visLimit = 7 * 10**(-7)
 uvLimit = 38 * 10**(-8)
 
+vstring = ('%.2E' % (v))
+lstring = ('%.2E' % (wavelength))
+
 # Run comparision and set variables based on results
 if wavelength > visLimit:
 	type = 'low'
@@ -49,9 +52,9 @@ else:
 
 # Return the data to the user
 print('')
-print('The frequency of the energy wave emitted was %s Hertz (cycles/sec)' % (v))
+print('The frequency of the energy wave emitted was %s Hertz (cycles/sec)' % (vstring))
 print('')
-print('The length of each wave was %s meters' % (wavelength))
+print('The length of each wave was %s meters' % (lstring))
 print('')
 print('So based on the information above, it is determined')
 print('that the energy emitted was %s level in the %s range of the specturm' % (type, range))

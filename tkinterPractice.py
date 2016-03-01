@@ -1,5 +1,12 @@
-from tkinter import *
+import Tkinter
 
-tk = Tk()
-btn = Button(tk, text = 'Click ME!')
+def hello():
+	print('Hello there!')
+
+top = Tkinter.Tk()
+
+btn = Tkinter.Button(top, text ="Click me", command = hello)
+
 btn.pack()
+
+top.mainloop()

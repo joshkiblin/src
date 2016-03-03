@@ -24,12 +24,15 @@ top.update()
 
 # Creates an object named 'ball' of the Ball class that we created in Ball.py
 ball = Ball(canvas, 'red')
-
+# Creates an object named 'paddle' of the Paddle class that we created in Paddle.py
+paddle = Paddle(canvas, 'blue')
 
 # Tells the canvas to not loop through the listed command until the user close the window
 while 1:
 	# Calls the draw function on the ball
 	ball.draw()
+	# Calls the draw function on the paddle
+	paddle.draw()
 	# Both of these update the canvas
 	top.update_idletasks()
 	top.update()

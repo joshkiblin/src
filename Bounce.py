@@ -3,6 +3,7 @@ import Tkinter
 import random
 import time
 from Ball import Ball
+from Paddle import Paddle
 
 # Creates a Tkinter object
 top = Tkinter.Tk()

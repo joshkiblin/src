@@ -23,5 +23,14 @@ top.update()
 
 # Creates an object named 'ball' of the Ball class that we created in Ball.py
 ball = Ball(canvas, 'red')
-# Tells the canvas to not close until the user close the window
-canvas.mainloop()
+
+
+# Tells the canvas to not loop through the listed command until the user close the window
+while 1:
+	# Calls the draw function on the ball
+	ball.draw()
+	# Both of these update the canvas
+	top.update_idletasks()
+	top.update()
+	#Tells the loop to sleep for 1/100th of a second before looping again
+	time.sleep(0.01)

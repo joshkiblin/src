@@ -30,10 +30,14 @@ ball = Ball(canvas, paddle, 'red')
 
 # Tells the canvas to not loop through the listed command until the user close the window
 while 1:
-	# Calls the draw function on the ball
-	ball.draw()
-	# Calls the draw function on the paddle
-	paddle.draw()
+
+	# Checks to make sure that hit_bottom is False
+	if ball.hit_bottom == False:
+		# Calls the draw function on the ball as long as hit_bottom is False
+		ball.draw()
+		# Calls the draw function on the paddle as long as hit_bottom is False
+		paddle.draw()
+
 	# Both of these update the canvas
 	top.update_idletasks()
 	top.update()

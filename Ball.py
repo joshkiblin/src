@@ -32,6 +32,9 @@ class Ball:
 		# Set the variable canvas_width to the current width of the canvas
 		self.canvas_width = self.canvas.winfo_width()
 
+		# Sets hit_bottom to False
+		self.hit_bottom = False
+
 	# Creates a function hit_paddle. Passes the parameter pos
 	def hit_paddle(self, pos):
 

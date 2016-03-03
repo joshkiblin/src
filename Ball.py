@@ -76,6 +76,12 @@ class Ball:
 			# now that it has hit the top of the screen and it moves down instead
 			self.y = 3
 		
+		# Checks to see if the y2 of the ball greater than or equal to the height of the canvas
+		# This means that it's looking to see if the ball hits the bottom of the canvas
+		if pos[3] >= self.canvas_height:
+			# If it has hit the bottom then we set hit_bottom to true
+			self.hit_bottom = True
+
 		# Checks to see if y2 (bottom of ball) is greater than or equal to canvas_height
 		# This would mean the the bottom of the ball has hit the bottom of the screen
 		if pos[3] >= self.canvas_height:

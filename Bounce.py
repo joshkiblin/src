@@ -40,24 +40,18 @@ canvas.create_window(10, 20, window=score, anchor='w')
 # Tells the canvas to not loop through the listed command until the user close the window
 while 1:
 
-	# Checks to make sure that hit_bottom is False
-	if ball.hit_bottom == False:
-		# Calls the draw function on the ball as long as hit_bottom is False
-		ball.draw()
-		# Calls the draw function on the paddle as long as hit_bottom is False
-		paddle.draw()
+	
+	# Calls the draw function on the ball as long as hit_bottom is False
+	ball.draw()
+	# Calls the draw function on the paddle as long as hit_bottom is False
+	paddle.draw()
+
+	# Updates the score
+	score['text'] = (ball.score())
 
 	# Both of these update the canvas
 	top.update_idletasks()
 	top.update()
-	# Incrementer is a variable used to reduce the number of times that 
-	# we check to update the displayed score
-	incrementer = 0
-	# Since the overall while loop updates 100 times a second we use % 100 to update once a second
-	if incrementer % 200 == 0:
-		if current_score != ball.score():
-			score['text'] = (ball.score())
-	else:
-		incrementer += 1
+		
 	#Tells the loop to sleep for 1/100th of a second before looping again
 	time.sleep(0.01)

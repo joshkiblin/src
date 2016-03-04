@@ -98,6 +98,7 @@ class Ball:
 		if pos[3] >= self.canvas_height:
 			# If it has hit the bottom then we set hit_bottom to true
 			self.hit_bottom = True
+			self.player_score = self.player_score - 5
 
 		# Checks to see if y2 (bottom of ball) is greater than or equal to canvas_height
 		# This would mean the the bottom of the ball has hit the bottom of the screen

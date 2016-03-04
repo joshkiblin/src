@@ -35,6 +35,9 @@ class Ball:
 		# Sets hit_bottom to False
 		self.hit_bottom = False
 
+		# Creates a variable called player_score. We set it to 0 to begin with.
+		self.player_score = 0
+
 	# Creates a function hit_paddle. Passes the parameter pos
 	def hit_paddle(self, pos):
 
@@ -56,6 +59,20 @@ class Ball:
 				return True
 		# If one or both aren't true then we return false
 		return False
+
+	# A function 'score' that calculates the score and returns it
+	def score(self):
+		# Creates a variable called pos by calling the canvas function coords
+		# coords returns the curent x and y coordinates of the parameter you pass it (self.id here)
+		# Returns the position in the format [x1, y1, x2, y2] (Top left, top right)
+		# This is just used so that we can use hit_paddle
+		pos = self.canvas.coords(self.id)
+		# Checks to see if hit_paddle is true
+		if self.hit_paddle(pos) == True:
+			# If it is then we increase player_score by 1
+			self.player_score += 1
+		# We then return the player_score
+		return self.player_score
 
 	# Creates a draw function for the Ball class
 	def draw(self):

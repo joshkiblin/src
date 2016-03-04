@@ -53,7 +53,6 @@ while 1:
 			score = Tkinter.Label(canvas, text= ball.score())
 			# Displays that window
 			canvas.create_window(10, 20, window=score, anchor='w')
-			canvas.after(4000, score.destroy())
 	else:
 		incrementer += 1
 	#Tells the loop to sleep for 1/100th of a second before looping again

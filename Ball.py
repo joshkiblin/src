@@ -70,7 +70,7 @@ class Ball:
 		# Checks to see if hit_paddle is true
 		if self.hit_paddle(pos) == True:
 			# If it is then we increase player_score by 1
-			self.player_score += 1
+			self.player_score  += 1
 		# We then return the player_score
 		return self.player_score
 

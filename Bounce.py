@@ -30,6 +30,13 @@ ball = Ball(canvas, paddle, 'red')
 
 current_score = 0
 
+# Creates the label for the score
+score = Tkinter.Label(canvas, text= ball.score())
+
+# Displays that window
+canvas.create_window(10, 20, window=score, anchor='w')
+
+
 # Tells the canvas to not loop through the listed command until the user close the window
 while 1:
 
@@ -45,15 +52,12 @@ while 1:
 	top.update()
 	# Incrementer is a variable used to reduce the number of times that 
 	# we check to update the displayed score
-	#incrementer = 0
+	incrementer = 0
 	# Since the overall while loop updates 100 times a second we use % 100 to update once a second
-	#if incrementer % 200 == 0:
-	#	if current_score != ball.score():
-			# Creates the label for the score
-	#		score = Tkinter.Label(canvas, text= ball.score())
-			# Displays that window
-	#		canvas.create_window(10, 20, window=score, anchor='w')
-	#else:
-	#	incrementer += 1
+	if incrementer % 200 == 0:
+		if current_score != ball.score():
+			score['text'] = (ball.score())
+	else:
+		incrementer += 1
 	#Tells the loop to sleep for 1/100th of a second before looping again
 	time.sleep(0.01)

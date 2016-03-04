@@ -28,6 +28,7 @@ paddle = Paddle(canvas, 'blue')
 # Creates an object named 'ball' of the Ball class that we created in Ball.py
 ball = Ball(canvas, paddle, 'red')
 
+current_score = 0
 
 # Tells the canvas to not loop through the listed command until the user close the window
 while 1:
@@ -42,8 +43,18 @@ while 1:
 	# Both of these update the canvas
 	top.update_idletasks()
 	top.update()
-	score = Tkinter.Label(canvas, text= ball.score())
-	canvas.create_window(10, 20, window=score, anchor='w')
-
+	# Incrementer is a variable used to reduce the number of times that 
+	# we check to update the displayed score
+	incrementer = 0
+	# Since the overall while loop updates 100 times a second we use % 100 to update once a second
+	if incrementer % 200 == 0:
+		if current_score != ball.score():
+			# Creates the label for the score
+			score = Tkinter.Label(canvas, text= ball.score())
+			# Displays that window
+			canvas.create_window(10, 20, window=score, anchor='w')
+			canvas.after(4000, score.destroy())
+	else:
+		incrementer += 1
 	#Tells the loop to sleep for 1/100th of a second before looping again
 	time.sleep(0.01)

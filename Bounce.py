@@ -14,6 +14,7 @@ top.resizable(0, 0)
 # Places the window on top of all other windows
 top.wm_attributes("-topmost", 1)
 
+
 # Creates the canvas and passes it several parameters:
 # bd = 0 and highlightthickness = 0 make sure that there isn't a border around the screen
 canvas = Tkinter.Canvas(top, width=500, height=400, bd=0, highlightthickness=0)
@@ -41,5 +42,8 @@ while 1:
 	# Both of these update the canvas
 	top.update_idletasks()
 	top.update()
+	score = Tkinter.Label(canvas, text= ball.score())
+	canvas.create_window(10, 20, window=score, anchor='w')
+
 	#Tells the loop to sleep for 1/100th of a second before looping again
 	time.sleep(0.01)
